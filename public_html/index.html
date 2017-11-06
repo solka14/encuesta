@@ -5,43 +5,218 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+    
     <head>
         <title>Encuesta 2017</title>
+       <h1 style="background-color: #b2dba1;border: 1px solid #4CAF50;padding: 20px; text-align: center;">Encuesta 2017</h1>
+     
+       <style> 
+ 
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #bce8f1;
+    color: black;
+    
+}
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+</style>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
-    </head>
-    <body>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
         
-        <form>
+       
+         changeMonth: true,
+      changeYear: true,
+      yearRange: '1940:2020'
+       
+    }) ;//numeral busca por su id, punto por su clase
+ 
+
+
+  } );
+  </script>
+  
+    </head>
+    
+    <body background="data:image/jpeg;base64,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">
+       
+        <form method="POST" action="registra.php">
+            
+            
   <div class="form-group">
-      <label style="color:#269abc;">Nombre</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Nombre">
+      <label>Nombre</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Nombre" name="nombre">
   </div>
             <div class="form-group">
     <label>Apellido</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Apellido">
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Apellido" name="apellido">
   </div>
             <div class="form-group">
     <label>DNI</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese DNI">
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese DNI" name="dni">
   </div>
             <div class="form-group">
     <label>CUIL</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese CUIL">
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese CUIL" name="cuil">
   </div>
             <div class="form-group">
     <label>Apellido Materno</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Apellido Materno">
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Apellido Materno" name="apellidoMaterno">
+  </div>
+     <div class="form-group">      
+   <p>Fecha nacimiento:<input type="text" id="datepicker" name="fechaNacimiento"></p>
+   </div>
+                 <div class="form-group">
+   <p>Pais</p>
+   <select class="form-control form-control-lg" name="paises">
+       <option>
+      <option value="australia">Australia</option>
+      <option value="canada">Argentina</option>
+      <option value="usa">Alemania</option>
+       </option>
+</select>
+   </div>
+   
+      <div class="form-group">
+   <p>Estado civil</p>
+     <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked >
+    Soltero/a
+  </label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    Casado/a
+  </label>
+</div>        
+       <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+    Divorciado/a
+  </label>
+           </div> 
+   <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked >
+    Viudo/a
+  </label>
+</div>
+      </div>  
+   </div>
+
+   
+   <div class="form-group">
+   <p>Genero</p>
+     <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios22" id="exampleRadios11" value="option1" checked>
+    Femenino
+  </label>
+</div>
+   
+           <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios22" id="exampleRadios12" value="option2">
+   Masculino
+  </label>
+</div>
+   </div>
+   
+            <div class="form-group">
+    <label>Calle</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese calle" name="calle">
+  </div>
+           
+           
+            <div class="form-group">
+    <label>Numero</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese numero" name="numero">
   </div>
             <div class="form-group">
-    <label>Nombre</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese Nombre">
+    <label>Piso</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese piso" name="piso">
   </div>
+            <div class="form-group">
+    <label>Dpto</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese dpto" name="depto">
+  </div>
+     
+          
+             <div class="form-group">
+   <p>Provincia</p>
+   <select class="form-control form-control-lg" name="provincia">
+              <option></option>
+</select>
+   </div>
+            
+             <div class="form-group">
+   <p>Localidad</p>
+   <select class="form-control form-control-lg" name="localidad">
+              <option></option>
+</select>
+   </div>
+          
+            <div class="form-group">
+    <label>Telefono fijo</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese telefono fijo">
+  </div>
+           <div class="form-group">
+    <label>Celular</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese celular">
+  </div>
+           <div class="form-group">
+    <label>Telefono alternativo</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese telefono alternativo">
+  </div>
+           <div class="form-group">
+    <label>Correo electronico</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese correo electronico">
+  </div>
+           
+           
+
+
+<input type="button" name="Submit" value="Enviar">
+     
 </form>
               
-        
+   
     </body>
 </html>
